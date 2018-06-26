@@ -13,6 +13,7 @@ def getNumLeafs(myTree):
     numLeafs = 0
     firstStr = list(myTree.keys())[0]
     secondDict = myTree[firstStr]
+    print secondDict
     for key in secondDict.keys():
         if type(secondDict[key]).__name__ == 'dict':
             numLeafs += getNumLeafs(secondDict[key])
